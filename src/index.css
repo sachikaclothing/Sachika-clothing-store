@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf6f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #d75d79;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a32b49;
+}
+
+/* Luxury gold glow effect */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #d4af37 0%, #aa820a 50%, #f4d03f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.royal-gradient {
+  background: linear-gradient(135deg, #2A0845 0%, #6441A5 100%);
+}
+
+.luxury-card-shadow {
+  box-shadow: 0 10px 30px -10px rgba(136, 38, 63, 0.12);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.pulse-badge {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
